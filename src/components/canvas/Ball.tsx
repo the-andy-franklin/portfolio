@@ -43,7 +43,6 @@ const BallCanvas = ({ icon }) => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <PresentationControls
-          enableZoom={false}
           polar={[-Infinity, Infinity]}
           snap
         >

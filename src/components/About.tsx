@@ -38,9 +38,9 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Hi, I'm Andy. I'm a skilled software developer
-        specializing in TypeScript, with expertise in
-        technologies like React, Node.js,and Three.js.
+        Hi, I'm Andy, a software developer specializing
+        in TypeScript, with expertise in technologies
+        like React, Node.js,and Three.js.
       </motion.p>
 
       <div className="grid place-items-center">

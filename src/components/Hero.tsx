@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import { motion } from "framer-motion";
-import { OrbitControls, PerspectiveCamera, Preload } from '@react-three/drei'
+import { OrbitControls, Preload } from '@react-three/drei'
 import CanvasLoader from "./Loader";
 import { styles } from "../styles";
 import { Canvas } from "@react-three/fiber";
@@ -24,8 +24,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <Canvas>
-        <PerspectiveCamera makeDefault position={new Vector3(1, 1, 1).setLength(15)} />
+      <Canvas camera={{ position: new Vector3(1, 1, 1).setLength(12) }}>
         <Suspense fallback={<CanvasLoader />}>
           <Blob />
           <OrbitControls
@@ -34,9 +33,9 @@ const Hero = () => {
             maxPolarAngle={Math.PI / 2 - 0.1}
             minPolarAngle={Math.PI / 2 - 0.1}
           />
-
-          <Preload all/>
         </Suspense>
+
+        <Preload all/>
       </Canvas>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
