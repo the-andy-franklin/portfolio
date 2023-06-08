@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import { motion } from "framer-motion";
-import { OrbitControls, Preload } from '@react-three/drei'
+import { OrbitControls, PerspectiveCamera, Preload } from '@react-three/drei'
 import CanvasLoader from "./Loader";
 import { styles } from "../styles";
 import { Canvas } from "@react-three/fiber";
@@ -20,11 +20,12 @@ const Hero = () => {
             Hi, I'm <span className="text-[#4EA8DE]">Andy</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            <br className="sm:block hidden" />
+            Full-Stack Developer <br className="sm:block hidden" />
           </p>
         </div>
       </div>
-      <Canvas camera={{ position: [0, 0, 8], rotation: [-Math.PI / 6, 0, 0] }}>
+      <Canvas>
+        <PerspectiveCamera makeDefault position={new Vector3(1, 1, 1).setLength(15)} />
         <Suspense fallback={<CanvasLoader />}>
           <Blob />
           <OrbitControls

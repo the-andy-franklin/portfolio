@@ -16,6 +16,7 @@ type Props = {
   experience: {
     title: string
     company_name: string
+    blurb?: string
     icon: any
     iconBg: string
     date: string
@@ -51,6 +52,14 @@ const ExperienceCard = ({ experience }: Props) => {
         >
           {experience.company_name}
         </p>
+        {experience.blurb && 
+          <p
+            className="text-white-50 m-0 italic"
+            style={{ fontWeight: 300, margin: 0 }}
+          >
+            {experience.blurb}
+          </p>
+        }
       </div>
 
       <ul className="mt-5 list-disc ml-5 space-y-2">

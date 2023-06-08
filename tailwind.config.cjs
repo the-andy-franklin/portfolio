@@ -4,6 +4,13 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      fontWeight: {
+        thin: 100,
+        light: 300,
+      },
+      margin: {
+        '0': '0'
+      },
       colors: {
         primary: "#030C12",
         secondary: "#A7D3EF",

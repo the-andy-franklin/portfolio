@@ -112,6 +112,7 @@ const experiences = [
   {
     title: "Software Engineer II",
     company_name: "Coinme",
+    blurb: "An industry leader in cash-to-crypto access points prioritizing financial inclusion and economic empowerment",
     icon: coinme_logo,
     iconBg: "#1EE66E",
     date: "Jan 2022 - May 2023",
@@ -125,6 +126,7 @@ const experiences = [
   {
     title: "Software Engineer",
     company_name: "Acorns",
+    blurb: "A fin-tech app democratizing investment by enabling users to effortlessly invest in select ETFs",
     icon: acorns_logo,
     iconBg: "#FFFFFF",
     date: "Oct 2019 - June 2020",
@@ -137,6 +139,7 @@ const experiences = [
   {
     title: "Full-Stack Developer",
     company_name: "Well-Crafted",
+    blurb: "A start-up offering tools for breweries to manage social media marketing campaigns effectively",
     icon: wc_logo,
     iconBg: "#FFFFFF",
     date: "Sept 2018 - Sept 2019",
@@ -149,6 +152,7 @@ const experiences = [
   {
     title: "Co-founder and Lead Developer",
     company_name: "Cedar Club",
+    blurb: "A Shopify-based store promoting ethically sourced, carbon-negative, bamboo-fiber socks and underwear",
     icon: shopify,
     iconBg: "#383E56",
     date: "Sept 2017 - June 2018",
