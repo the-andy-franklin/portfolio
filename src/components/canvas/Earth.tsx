@@ -26,29 +26,28 @@ export const EarthCanvas = () => {
         position: [0, 3, 12],
       }}
     >
-      <ambientLight intensity={0.25} />
-      <hemisphereLight intensity={0.15} groundColor="black" />
-      <pointLight intensity={1} />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
-      />
-
       <Suspense fallback={<CanvasLoader />}>
+        <Earth />
         <OrbitControls
           autoRotate
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Earth />
-
-        <Preload all />
+        <ambientLight intensity={0.25} />
+        <hemisphereLight intensity={0.15} groundColor="black" />
+        <pointLight intensity={1} />
+        <spotLight
+          position={[-20, 50, 10]}
+          angle={0.12}
+          penumbra={1}
+          intensity={1}
+          castShadow
+          shadow-mapSize={1024}
+        />
       </Suspense>
+
+      <Preload all />
     </Canvas>
   );
 };
