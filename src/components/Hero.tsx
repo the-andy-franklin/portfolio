@@ -1,11 +1,7 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import { motion } from "framer-motion";
-import { OrbitControls, Preload } from '@react-three/drei'
-import CanvasLoader from "./Loader";
 import { styles } from "../styles";
-import { Canvas } from "@react-three/fiber";
-import { Blob } from "./canvas";
-import { Vector3 } from 'three';
+import { EarthCanvas, StarsCanvas } from "./canvas";
 
 const Hero = () => {
   return (
@@ -24,19 +20,8 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <Canvas camera={{ position: new Vector3(1, 1, 1).setLength(12) }}>
-        <Suspense fallback={<CanvasLoader />}>
-          <Blob />
-          <OrbitControls
-            enableZoom={false}
-            enablePan={false}
-            maxPolarAngle={Math.PI / 2 - 0.1}
-            minPolarAngle={Math.PI / 2 - 0.1}
-          />
-        </Suspense>
-
-        <Preload all/>
-      </Canvas>
+      <EarthCanvas />
+      <StarsCanvas />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">

@@ -1,12 +1,9 @@
 import React, { useState, useRef } from "react";
-import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc/SectionWrapper";
-import { slideIn } from "../utils/motion";
-import {publicKey, serviceKey, templateKey, toEmail} from './emailValidation'
+import { publicKey, serviceKey, templateKey, toEmail } from './emailValidation'
+import BlobCanvas from "./canvas/blobs/Blob";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -63,10 +60,7 @@ const Contact = () => {
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-purple3 p-8 rounded-2xl"
-      >
+      <div className="flex-[0.75] bg-purple3 p-8 rounded-2xl">
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
@@ -116,14 +110,11 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-      </motion.div>
+      </div>
 
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
-        <EarthCanvas />
-      </motion.div>
+      <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
+        <BlobCanvas />
+      </div>
     </div>
   );
 };
