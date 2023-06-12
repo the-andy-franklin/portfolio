@@ -25,7 +25,7 @@ const Blob = () => {
 
       material.current.uniforms.u_intensity.value = MathUtils.lerp(
         material.current.uniforms.u_intensity.value,
-        hover.current ? 1 : 0.1,
+        hover.current ? 0.75 : 0.1,
         0.02
       );
     }
