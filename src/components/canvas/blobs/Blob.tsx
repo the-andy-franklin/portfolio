@@ -55,7 +55,7 @@ const Blob = () => {
 
 const BlobCanvas = () => {
   return (
-    <Canvas camera={{ position: new Vector3(1, 1, 1).setLength(1) }}>
+    <Canvas camera={{ position: new Vector3(1, 1, 1).setLength(1.5) }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
