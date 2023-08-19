@@ -1,13 +1,6 @@
-import React from 'react'
+import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import {
-  About,
-  Contact,
-  Experience,
-  Hero,
-  Navbar,
-  StarsCanvas,
-} from "./components";
+import { About, Contact, Experience, Hero, Navbar } from "./components";
 
 const App = () => {
   return (
